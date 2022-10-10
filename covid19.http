@@ -1,0 +1,51 @@
+###
+//API-1 Get all states
+GET http://localhost:3000/states/
+
+###
+//API-2 Get a state
+GET http://localhost:3000/states/8
+
+###
+//API-3 Add a district
+POST http://localhost:3000/districts/
+Content-Type: application/json
+
+{
+  "districtName": "AP",
+  "stateId": 3,
+  "cases": 5323,
+  "cured": 5000,
+  "active": 313,
+  "deaths": 10
+}
+
+###
+//API-4 Get a district
+GET http://localhost:3000/districts/322/
+
+###
+//API-5 Delete a district
+DELETE http://localhost:3000/districts/765/
+
+###
+//API-6 Update a district
+PUT http://localhost:3000/districts/755/
+Content-Type: application/json
+
+{
+     "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+//API-7 Get a state stats
+GET http://localhost:3000/states/26/stats/
+
+###
+//API-8 Get a State Name By District Id
+GET http://localhost:3000/districts/5/details/
